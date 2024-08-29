@@ -1,0 +1,17 @@
+<ul id="nav-bar" class="container" data-theme="light">
+    <h1 id="heading">TO-DO-LIST</h1>
+    <div class="flex">
+        <li class="nav-items"><a class="nav-links" href="/">Home</a></li>
+        <li class="nav-items"><a class="nav-links" href="/">About</a></li>
+        <li class="nav-items"><a class="nav-links" href="/">Contact</a></li>
+    </div>
+    <div id="profile-info-container" class="flex">
+        <% if (user) { %>
+            <li class="nav-items profile">
+                <i class="ri-user-fill" id="profile-icon"></i>
+                <%= user.username %>
+            </li>
+            <% } %>
+            <a href="/logout" id="logout-btn"><i class="ri-logout-circle-r-line" id="logout-icon"></i></a>
+    </div>
+</ul>

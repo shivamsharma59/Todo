@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- remixicon  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- style.css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- navbar css  -->
+    <link rel="stylesheet" href="navBar.css">
+
+    <title>ToDo</title>
+</head>
+
+<body data-theme="light">
+    <div id="show-task-canvas" class="hidden" onclick="hideShowTaskCss()">
+    </div>
+    <div id="show-task-container" class="hidden">
+        <!-- <input type="text" name="task-subject" id="show-task-container-subject" class="input task-subject"> -->
+        <textarea name="task-body" id="show-task-container-body" class="input task-body" rows="15" cols="30"
+            readonly></textarea>
+        <button id="save-edit-btn" class="btn hidden" type="button">Save</button>
+    </div>
+
+    <header>
+        <%- include('partials/nav.ejs') %>
+    </header>
+    <main>
+        <!-- input form  -->
+        <section id="task-input" class="container">
+            <form action="" class="flex">
+                <input type="text" id="new-task" class="input" placeholder="Add a new task">
+                <button id="AddTaskBtn" type="button" class="btn" onclick="createTask()">Add</button>
+            </form>
+        </section>
+
+        <!-- Task List  -->
+        <section id="task-list-container" class="container">
+            <ul id="task-list">
+                <!-- <li class="task">
+                    <input type="checkbox" class="task-checkbox" name="completed" id="task1">
+                    <input type="text" class="input task-body" value="Plant a tree" onclick="readTaskCss()" readonly>
+                    <i class="ri-pencil-line edit-task" onclick="editTaskCss()"></i>
+                    <i class="ri-delete-bin-6-line delete-task" onclick="deleteTask()"></i>
+                </li> -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- include Javascript files  -->
+    <script src="src/toDoCss.js"></script>
+    <script src="src/toDoList.js"></script> <!--order matters-->
+    <script src="src/index.js"></script> <!--order matters-->
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "5a5703c4-9c87-4ce3-83d9-6d8646b1c903",
+    "username": "shivamsharma",
+    "password": "$2a$10$H0FOgpHOfD4p4BjK4SHp/uKkUdeCBrGZ6IM1xWsTiMMiqUUBnctAG",
+    "email": "abc@gmail.com",
+    "tasks": [
+      {
+        "id": 1724108576292,
+        "title": "Plant a tree",
+        "completed": false
+      },
+      {
+        "id": 1724108581663,
+        "title": "Study Daily",
+        "completed": false
+      },
+      {
+        "id": 1724108599612,
+        "title": "Finish The new Japanese Lesson",
+        "completed": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: "Open Sans", sans-serif, Arial, Helvetica;
+}
+
+/* light theme */
+:root.light-theme,
+[data-theme="light"] {
+    --primary-color: #7c0292;
+    --secondary-color: #fd4ec0;
+    --accent-color: #fc0373;
+    --text-color: #240029;
+    --background-color: #fcebff;
+}
+
+/* dark theme  */
+:root.dark-theme,
+[data-theme="dark"] {
+    --primary-color: #e86cfd;
+    --secondary-color: #ae0273;
+    --accent-color: #fc0473;
+    --text-color: #fad6ff;
+    --background-color: #100013;
+}
+
+#nav-bar {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    color: var(--text-color);
+    padding: 1rem;
+}
+
+.nav-links,
+.nav-items {
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#profile-icon {
+    color: var(--accent-color);
+}
+
+.profile:hover {
+    cursor: pointer;
+}
+
+/* --- header style --- */
+#heading {
+    font-weight: bold;
+    text-align: center;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+.nav-items {
+    position: relative;
+}
+
+.nav-items::after {
+    content: "";
+    position: absolute;
+    background-color: var(--accent-color);
+    left: 0;
+    height: 3px;
+    width: 0px;
+    top: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-items:hover::after {
+    width: 100%;
+}
+
+#profile-info-container{
+    align-items: center;
+}
+
+#logout-btn {
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+
+/* utitlity style  */
+h1 {
+    font-weight: 500;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+.flex {
+    display: flex;
+    gap: 2rem;
+}
+
+
+.container {
+    width: 80vw;
+    margin: 2rem auto;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
